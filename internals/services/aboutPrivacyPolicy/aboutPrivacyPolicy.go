@@ -26,7 +26,7 @@ func (a *AboutPrivacyPolicy) AboutPrivacyPolicy() (*dtos.AboutPrivacyPolicyRespo
 	pPolicy := dtos.AboutPrivacyPolicyResponse{}
 	latestAboutPrivacyPolicy, err := a.aboutPrivacyPolicy.GetLatestAboutPrivacyPolicy()
 	if err != nil {
-		a.l.Error("GetLatestAboutPrivacyPolicy Error - ", err)
+		a.l.Error("GetLatestAboutPrivacyPolicy Error  - ", err)
 		return nil, err
 	}
 	a.l.Debug("latestVersionCode-", latestAboutPrivacyPolicy.VersionCode)
